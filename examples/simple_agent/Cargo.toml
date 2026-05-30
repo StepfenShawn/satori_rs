@@ -1,0 +1,21 @@
+[package]
+name = "simple_agent"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[[example]]
+name = "simple_agent"
+path = "main.rs"
+
+[dependencies]
+agent = { path = "../../crates/agent" }
+agent-llm = { path = "../../crates/agent-llm" }
+agent-tools = { path = "../../crates/agent-tools" }
+tokio.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true

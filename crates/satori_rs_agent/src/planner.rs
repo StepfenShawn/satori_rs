@@ -1,6 +1,6 @@
 //! Planner trait and rule-based implementation
 
-use agent_core::AgentError;
+use satori_rs_agent_core::AgentError;
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 

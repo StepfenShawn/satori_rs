@@ -1,6 +1,6 @@
 //! Search tool implementation
 
-use agent_core::AgentError;
+use satori_rs_agent_core::AgentError;
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 
@@ -24,7 +24,7 @@ impl Default for SearchTool {
 }
 
 #[async_trait]
-impl agent_runtime::Tool for SearchTool {
+impl satori_rs_agent_runtime::Tool for SearchTool {
     fn name(&self) -> &str {
         "search"
     }

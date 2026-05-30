@@ -1,12 +1,15 @@
 [package]
-name = "agent-runtime"
+name = "satori_rs_agent"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
 
 [dependencies]
-agent-core = { path = "../agent-core" }
+satori_rs_agent_core = { path = "../satori_rs_agent_core" }
+satori_rs_agent_runtime = { path = "../satori_rs_agent_runtime" }
+satori_rs_agent_llm = { path = "../satori_rs_agent_llm" }
+satori_rs_agent_tools = { path = "../satori_rs_agent_tools" }
 tokio.workspace = true
 async-trait.workspace = true
 serde.workspace = true
@@ -16,7 +19,8 @@ thiserror.workspace = true
 uuid.workspace = true
 futures.workspace = true
 tracing.workspace = true
-dashmap = "5.5"
+tracing-subscriber.workspace = true
+regex-lite = "0.1"
 
 [dev-dependencies]
 tokio-test = "0.4"

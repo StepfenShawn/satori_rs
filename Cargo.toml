@@ -1,12 +1,12 @@
 [workspace]
 resolver = "2"
 members = [
-    "crates/agent-core",
-    "crates/agent-runtime",
-    "crates/agent-llm",
-    "crates/agent-tools",
-    "crates/agent-macros",
-    "crates/agent",
+    "crates/satori_rs_agent_core",
+    "crates/satori_rs_agent_runtime",
+    "crates/satori_rs_agent_llm",
+    "crates/satori_rs_agent_tools",
+    "crates/satori_rs_agent_macros",
+    "crates/satori_rs_agent",
     "examples/simple_agent",
 ]
 

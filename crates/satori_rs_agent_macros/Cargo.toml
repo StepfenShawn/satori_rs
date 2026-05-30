@@ -1,5 +1,5 @@
 [package]
-name = "agent-macros"
+name = "satori_rs_agent_macros"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true

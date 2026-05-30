@@ -1,7 +1,7 @@
 //! LLM trait definition
 
 use async_trait::async_trait;
-use agent_core::AgentError;
+use satori_rs_agent_core::AgentError;
 
 #[async_trait]
 pub trait LLM: Send + Sync {

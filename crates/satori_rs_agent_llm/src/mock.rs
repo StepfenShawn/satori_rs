@@ -1,7 +1,7 @@
 //! Mock LLM implementation for testing
 
 use crate::LLM;
-use agent_core::AgentError;
+use satori_rs_agent_core::AgentError;
 use async_trait::async_trait;
 
 #[derive(Debug, Clone)]

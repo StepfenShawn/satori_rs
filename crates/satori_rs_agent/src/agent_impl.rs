@@ -1,9 +1,9 @@
 //! Agent implementation
 
 use crate::planner::Planner;
-use agent_core::{AgentError, Context};
-use agent_llm::LLM;
-use agent_runtime::ToolRegistry;
+use satori_rs_agent_core::{AgentError, Context};
+use satori_rs_agent_llm::LLM;
+use satori_rs_agent_runtime::ToolRegistry;
 use std::sync::Arc;
 use tokio::sync::RwLock;
 
@@ -77,7 +77,7 @@ impl Agent {
         Ok(result_str)
     }
 
-    pub async fn add_tool<T: agent_runtime::Tool + 'static>(&self, tool: T) -> Result<(), AgentError> {
+    pub async fn add_tool<T: satori_rs_agent_runtime::Tool + 'static>(&self, tool: T) -> Result<(), AgentError> {
         let registry = self.tool_registry.write().await;
         registry.register(tool).await
     }
@@ -95,8 +95,8 @@ impl Agent {
 #[cfg(test)]
 mod tests {
     use crate::{builder::AgentBuilder, planner::RuleBasedPlanner};
-    use agent_llm::MockLLM;
-    use agent_tools::{CalculatorTool, SearchTool};
+    use satori_rs_agent_llm::MockLLM;
+    use satori_rs_agent_tools::{CalculatorTool, SearchTool};
 
     #[tokio::test]
     async fn test_agent_calculator() {

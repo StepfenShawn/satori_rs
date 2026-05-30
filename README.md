@@ -37,19 +37,19 @@ Final Answer
 
 ## Crates
 
-- `agent-core` - Core types: Message, Payload, Actor trait, Context
-- `agent-runtime` - Tool trait, ToolRegistry, TaskGraph
-- `agent-llm` - LLM trait, MockLLM, OllamaLLM
-- `agent-tools` - Built-in tools: SearchTool, CalculatorTool
-- `agent-macros` - Utility macros
-- `agent` - Main crate combining all components
+- `satori_rs_agent_core` - Core types: Message, Payload, Actor trait, Context
+- `satori_rs_agent_runtime` - Tool trait, ToolRegistry, TaskGraph
+- `satori_rs_agent_llm` - LLM trait, MockLLM, OllamaLLM
+- `satori_rs_agent_tools` - Built-in tools: SearchTool, CalculatorTool
+- `satori_rs_agent_macros` - Utility macros
+- `satori_rs_agent` - Main crate combining all components
 
 ## Quick Start
 
 ```rust
-use agent::AgentBuilder;
-use agent_llm::MockLLM;
-use agent_tools::{CalculatorTool, SearchTool};
+use satori_rs_agent::AgentBuilder;
+use satori_rs_agent_llm::MockLLM;
+use satori_rs_agent_tools::{CalculatorTool, SearchTool};
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
@@ -106,7 +106,7 @@ For testing and development without external dependencies.
 Connects to local Ollama server for real LLM inference.
 
 ```rust
-use agent_llm::OllamaLLM;
+use satori_rs_agent_llm::OllamaLLM;
 
 let llm = OllamaLLM::new("http://localhost:11434", "qwen3");
 ```
@@ -117,8 +117,8 @@ let llm = OllamaLLM::new("http://localhost:11434", "qwen3");
 
 ```rust
 use async_trait::async_trait;
-use agent_runtime::Tool;
-use agent_core::AgentError;
+use satori_rs_agent_runtime::Tool;
+use satori_rs_agent_core::AgentError;
 
 struct MyTool;
 
@@ -152,8 +152,8 @@ impl Tool for MyTool {
 
 ```rust
 use async_trait::async_trait;
-use agent::Planner;
-use agent_core::AgentError;
+use satori_rs_agent::Planner;
+use satori_rs_agent_core::AgentError;
 
 struct MyPlanner;
 

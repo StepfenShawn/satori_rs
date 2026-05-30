@@ -1,7 +1,7 @@
 //! Tool trait definition
 
 use async_trait::async_trait;
-use agent_core::AgentError;
+use satori_rs_agent_core::AgentError;
 
 /// Trait for tools that can be executed by the agent.
 ///

@@ -1,7 +1,7 @@
 //! Tool registry for managing and executing tools
 
 use crate::Tool;
-use agent_core::AgentError;
+use satori_rs_agent_core::AgentError;
 use std::collections::HashMap;
 use std::sync::Arc;
 use tokio::sync::RwLock;

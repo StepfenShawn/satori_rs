@@ -1,6 +1,6 @@
 //! Calculator tool implementation
 
-use agent_core::AgentError;
+use satori_rs_agent_core::AgentError;
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 
@@ -20,7 +20,7 @@ impl Default for CalculatorTool {
 }
 
 #[async_trait]
-impl agent_runtime::Tool for CalculatorTool {
+impl satori_rs_agent_runtime::Tool for CalculatorTool {
     fn name(&self) -> &str {
         "calculator"
     }
@@ -86,7 +86,7 @@ impl agent_runtime::Tool for CalculatorTool {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use agent_runtime::Tool;
+    use satori_rs_agent_runtime::Tool;
 
     #[tokio::test]
     async fn test_calculator_add() {

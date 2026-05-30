@@ -1,7 +1,7 @@
 //! Ollama LLM implementation
 
 use crate::LLM;
-use agent_core::AgentError;
+use satori_rs_agent_core::AgentError;
 use async_trait::async_trait;
 use reqwest::Client;
 use serde::{Deserialize, Serialize};

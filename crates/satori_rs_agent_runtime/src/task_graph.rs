@@ -1,6 +1,6 @@
 //! Task Graph for managing task dependencies and concurrent execution
 
-use agent_core::AgentError;
+use satori_rs_agent_core::AgentError;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::sync::Arc;

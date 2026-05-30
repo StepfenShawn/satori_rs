@@ -2,15 +2,15 @@
 
 use crate::planner::Planner;
 use crate::{Agent, RuleBasedPlanner};
-use agent_core::Context;
-use agent_llm::LLM;
-use agent_runtime::ToolRegistry;
+use satori_rs_agent_core::Context;
+use satori_rs_agent_llm::LLM;
+use satori_rs_agent_runtime::ToolRegistry;
 use std::sync::Arc;
 use tokio::sync::RwLock;
 
 pub struct AgentBuilder {
     name: String,
-    tools: Vec<Arc<dyn agent_runtime::Tool>>,
+    tools: Vec<Arc<dyn satori_rs_agent_runtime::Tool>>,
     llm: Option<Arc<dyn LLM>>,
     planner: Option<Arc<dyn Planner>>,
 }
@@ -30,7 +30,7 @@ impl AgentBuilder {
         self
     }
 
-    pub fn tool<T: agent_runtime::Tool + 'static>(mut self, tool: T) -> Self {
+    pub fn tool<T: satori_rs_agent_runtime::Tool + 'static>(mut self, tool: T) -> Self {
         self.tools.push(Arc::new(tool));
         self
     }

@@ -3,105 +3,6 @@
 version = 4
 
 [[package]]
-name = "agent"
-version = "0.1.0"
-dependencies = [
- "agent-core",
- "agent-llm",
- "agent-runtime",
- "agent-tools",
- "anyhow",
- "async-trait",
- "futures",
- "regex-lite",
- "serde",
- "serde_json",
- "thiserror",
- "tokio",
- "tokio-test",
- "tracing",
- "tracing-subscriber",
- "uuid",
-]
-
-[[package]]
-name = "agent-core"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "async-trait",
- "futures",
- "serde",
- "serde_json",
- "thiserror",
- "tokio",
- "tokio-test",
- "tracing",
- "uuid",
-]
-
-[[package]]
-name = "agent-llm"
-version = "0.1.0"
-dependencies = [
- "agent-core",
- "anyhow",
- "async-trait",
- "reqwest",
- "serde",
- "serde_json",
- "thiserror",
- "tokio",
- "tokio-test",
- "tracing",
-]
-
-[[package]]
-name = "agent-macros"
-version = "0.1.0"
-dependencies = [
- "async-trait",
- "proc-macro2",
- "quote",
- "syn",
- "tokio-test",
-]
-
-[[package]]
-name = "agent-runtime"
-version = "0.1.0"
-dependencies = [
- "agent-core",
- "anyhow",
- "async-trait",
- "dashmap",
- "futures",
- "serde",
- "serde_json",
- "thiserror",
- "tokio",
- "tokio-test",
- "tracing",
- "uuid",
-]
-
-[[package]]
-name = "agent-tools"
-version = "0.1.0"
-dependencies = [
- "agent-core",
- "agent-runtime",
- "anyhow",
- "async-trait",
- "serde",
- "serde_json",
- "thiserror",
- "tokio",
- "tokio-test",
- "tracing",
-]
-
-[[package]]
 name = "aho-corasick"
 version = "1.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1096,6 +997,105 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9774ba4a74de5f7b1c1451ed6cd5285a32eddb5cccb8cc655a4e50009e06477f"
 
 [[package]]
+name = "satori_rs_agent"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "futures",
+ "regex-lite",
+ "satori_rs_agent_core",
+ "satori_rs_agent_llm",
+ "satori_rs_agent_runtime",
+ "satori_rs_agent_tools",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "tokio",
+ "tokio-test",
+ "tracing",
+ "tracing-subscriber",
+ "uuid",
+]
+
+[[package]]
+name = "satori_rs_agent_core"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "futures",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "tokio",
+ "tokio-test",
+ "tracing",
+ "uuid",
+]
+
+[[package]]
+name = "satori_rs_agent_llm"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "reqwest",
+ "satori_rs_agent_core",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "tokio",
+ "tokio-test",
+ "tracing",
+]
+
+[[package]]
+name = "satori_rs_agent_macros"
+version = "0.1.0"
+dependencies = [
+ "async-trait",
+ "proc-macro2",
+ "quote",
+ "syn",
+ "tokio-test",
+]
+
+[[package]]
+name = "satori_rs_agent_runtime"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "dashmap",
+ "futures",
+ "satori_rs_agent_core",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "tokio",
+ "tokio-test",
+ "tracing",
+ "uuid",
+]
+
+[[package]]
+name = "satori_rs_agent_tools"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "satori_rs_agent_core",
+ "satori_rs_agent_runtime",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "tokio",
+ "tokio-test",
+ "tracing",
+]
+
+[[package]]
 name = "schannel"
 version = "0.1.29"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1223,10 +1223,10 @@ dependencies = [
 name = "simple_agent"
 version = "0.1.0"
 dependencies = [
- "agent",
- "agent-llm",
- "agent-tools",
  "anyhow",
+ "satori_rs_agent",
+ "satori_rs_agent_llm",
+ "satori_rs_agent_tools",
  "serde",
  "serde_json",
  "tokio",

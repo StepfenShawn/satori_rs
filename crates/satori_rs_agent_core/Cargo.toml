@@ -1,5 +1,5 @@
 [package]
-name = "agent-core"
+name = "satori_rs_agent_core"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true

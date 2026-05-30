@@ -10,9 +10,9 @@ name = "simple_agent"
 path = "main.rs"
 
 [dependencies]
-agent = { path = "../../crates/agent" }
-agent-llm = { path = "../../crates/agent-llm" }
-agent-tools = { path = "../../crates/agent-tools" }
+satori_rs_agent = { path = "../../crates/satori_rs_agent" }
+satori_rs_agent_llm = { path = "../../crates/satori_rs_agent_llm" }
+satori_rs_agent_tools = { path = "../../crates/satori_rs_agent_tools" }
 tokio.workspace = true
 anyhow.workspace = true
 serde.workspace = true

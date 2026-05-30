@@ -2,9 +2,9 @@
 //!
 //! Demonstrates basic usage of the agent framework.
 
-use agent::AgentBuilder;
-use agent_llm::MockLLM;
-use agent_tools::{CalculatorTool, SearchTool};
+use satori_rs_agent::AgentBuilder;
+use satori_rs_agent_llm::MockLLM;
+use satori_rs_agent_tools::{CalculatorTool, SearchTool};
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {

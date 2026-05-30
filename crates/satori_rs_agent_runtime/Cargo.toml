@@ -1,20 +1,22 @@
 [package]
-name = "agent-llm"
+name = "satori_rs_agent_runtime"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
 
 [dependencies]
-agent-core = { path = "../agent-core" }
+satori_rs_agent_core = { path = "../satori_rs_agent_core" }
 tokio.workspace = true
 async-trait.workspace = true
 serde.workspace = true
 serde_json.workspace = true
 anyhow.workspace = true
 thiserror.workspace = true
-reqwest.workspace = true
+uuid.workspace = true
+futures.workspace = true
 tracing.workspace = true
+dashmap = "5.5"
 
 [dev-dependencies]
 tokio-test = "0.4"
